@@ -1,5 +1,5 @@
 # Requirements Specification: ReliefOps QA (Disaster Relief & Volunteer Operations Question-Answering Assistant)
-Version: 1.0
+Version: 1.1
 
 ## Section 0: Project Framing & Application Scope Checkpoint
 
@@ -13,7 +13,7 @@ Version: 1.0
 | **Objective O3** | To evaluate the assistant on retrieval quality, answer faithfulness and citation accuracy, refusal correctness, and latency, against BM25-only and dense-only baselines. |
 | **Intended Users** | NGO student volunteers, community disaster relief coordinators, and logistics mobilization teams who need plain-language, citation-backed answers on shelter setup, supply sorting, and volunteer coordination protocols. |
 | **Supported Tasks** | (1) Answering questions about SOPs for evacuation shelter (PPS) registration and operation. (2) Answering questions about supply handling and triage categorisation guidelines. (3) Clarifying volunteer roles and multi-agency coordination procedures. (4) Providing source references for every document-grounded answer. |
-| **Information / Knowledge Domain** | Public Malaysian civil defense directives (MKN Directive No. 20), the CFE-DM Malaysia disaster management reference handbook, and annotated crisis response datasets (HumAID, CrisisBench), limited to non-clinical logistics, shelter management, and volunteer coordination. |
+| **Information / Knowledge Domain** | Public Malaysian civil defense directives (MKN Directive No. 20), a NADMA Malay-language guideline on Pusat Pemindahan Sementara (PPS) management, the CFE-DM Malaysia disaster management reference handbook, and annotated crisis response datasets (HumAID, CrisisBench), limited to non-clinical logistics, shelter management, and volunteer coordination. The V1 data pipeline (Week 3) processes a subset of these sources. |
 | **Operating Context** | A web-based chat interface used by volunteers on mobile or laptop devices during flood mobilisation and preparation, where quick answers are needed and the user may be under time pressure. |
 | **Important Constraints** | Only publicly available documents and datasets are used. The project operates under a student budget and semester timeline. The system is not integrated with official agency systems. The V1 knowledge base is limited to a small set of public documents and datasets. Queries may mix English and Malay terminology. |
 | **Explicit Out-of-Scope Tasks** | Clinical medical diagnosis or treatment advice. Autonomous rescue dispatch or emergency response decisions. Issuing evacuation orders or flood warnings. Real-time flood forecasting. Replacement of official emergency services (999). |
