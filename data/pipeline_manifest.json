@@ -1,50 +1,52 @@
 {
   "pipeline_version": "week3-v1",
-  "generated_at_utc": "2026-11-10T03:05:50.460489+00:00",
-  "data_type": "documents_s02",
+  "generated_at_utc": "2026-11-10T03:05:50.002870+00:00",
+  "data_type": "documents_s01",
   "configuration": {
-    "source_id": "S02",
+    "source_id": "S01",
     "method": "page-aware-paragraph",
     "chunk_size": 500,
-    "toc_pages": [],
-    "whole_pages": [
-      4
+    "toc_pages": [
+      1,
+      2
     ],
+    "whole_pages": [],
     "cleaning": "NFKC; stray-E quote repair; spaced-hyphen repair; line reflow"
   },
-  "processing_method": "page-aware-paragraph-char-500; table-of-contents pages excluded: []; whole-page chunks: [4]",
+  "processing_method": "page-aware-paragraph-char-500; table-of-contents pages excluded: [1, 2]; whole-page chunks: []",
   "sources": [
     {
-      "path": "/content/week3_project/data/raw/nadma_garis_panduan_pps_my.pdf",
-      "sha256": "db47e10e04865c87fc6b1489f16d7ba3321cbf081e0919db6dcc7a380cd2aa87"
+      "path": "/content/week3_project/data/raw/mkn_directive_20_1997.pdf",
+      "sha256": "1f9b2faf796291454d741a1b7d66abd3cebf7ed3132f2bef7ecda675ac336ee4"
     }
   ],
   "outputs": [
-    "/content/week3_project/data/pipeline_v1/documents_s02/prepared_text.jsonl"
+    "/content/week3_project/data/pipeline_v1/documents_s01/prepared_text.jsonl"
   ],
   "source_output_mapping": [
     {
-      "source": "/content/week3_project/data/raw/nadma_garis_panduan_pps_my.pdf",
-      "output": "/content/week3_project/data/pipeline_v1/documents_s02/prepared_text.jsonl"
+      "source": "/content/week3_project/data/raw/mkn_directive_20_1997.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents_s01/prepared_text.jsonl"
     }
   ],
   "inspection": {
-    "source": "nadma_garis_panduan_pps_my.pdf",
-    "pages": 5,
-    "characters": 7586,
+    "source": "mkn_directive_20_1997.pdf",
+    "pages": 26,
+    "characters": 55055,
     "pages_without_text": [],
-    "toc_pages_excluded": [],
-    "whole_page_chunks": [
-      4
-    ]
+    "toc_pages_excluded": [
+      1,
+      2
+    ],
+    "whole_page_chunks": []
   },
   "validation": {
     "output_count": 1,
     "output_sha256": [
-      "94a05864d341666ca1fda326a45ef61503065b0d28b9141d2d8bfac1233483b4"
+      "9d46a49ca943de05e064156d265f0e8c2b2f3c47045a0adf1dfab0df32ef9354"
     ],
     "output_bytes": [
-      12677
+      91640
     ]
   },
   "source_version": "Not verified",
