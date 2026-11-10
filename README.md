@@ -71,4 +71,4 @@ NGO student volunteers, community disaster relief coordinators, and logistics mo
 |------|-------|-------------|--------|
 | W1 | System map + project scope | README + docs | ✅ |
 | W2 | Requirements, evaluation criteria, V1 architecture | docs/week2_requirements.md, docs/week2_evaluation_criteria.md, docs/week2_architecture_v1.png, docs/week2_architecture_decisions.md | ✅ |
-| W3 | Data engineering: V1 data pipeline (Sources 3 and 5) | notebooks/week3_pipeline.ipynb, docs/week3_data_inventory.md, docs/week3_pipeline_diagram.png, docs/week3_pipeline_decisions.md | 🔄 |
+| W3 | Data engineering: V1 data pipeline (Sources 3 and 5) | notebooks/week3_pipeline.ipynb, docs/week3_data_inventory.md, docs/week3_pipeline_diagram.png, docs/week3_pipeline_decisions.md, data/week3_manifest.json | ✅ |
