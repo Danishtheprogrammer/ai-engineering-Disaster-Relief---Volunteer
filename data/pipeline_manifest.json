@@ -1,0 +1,52 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-10T03:05:50.460489+00:00",
+  "data_type": "documents_s02",
+  "configuration": {
+    "source_id": "S02",
+    "method": "page-aware-paragraph",
+    "chunk_size": 500,
+    "toc_pages": [],
+    "whole_pages": [
+      4
+    ],
+    "cleaning": "NFKC; stray-E quote repair; spaced-hyphen repair; line reflow"
+  },
+  "processing_method": "page-aware-paragraph-char-500; table-of-contents pages excluded: []; whole-page chunks: [4]",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/nadma_garis_panduan_pps_my.pdf",
+      "sha256": "db47e10e04865c87fc6b1489f16d7ba3321cbf081e0919db6dcc7a380cd2aa87"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/documents_s02/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/nadma_garis_panduan_pps_my.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents_s02/prepared_text.jsonl"
+    }
+  ],
+  "inspection": {
+    "source": "nadma_garis_panduan_pps_my.pdf",
+    "pages": 5,
+    "characters": 7586,
+    "pages_without_text": [],
+    "toc_pages_excluded": [],
+    "whole_page_chunks": [
+      4
+    ]
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "94a05864d341666ca1fda326a45ef61503065b0d28b9141d2d8bfac1233483b4"
+    ],
+    "output_bytes": [
+      12677
+    ]
+  },
+  "source_version": "Not verified",
+  "access_rights": "Not verified: check before sharing"
+}
