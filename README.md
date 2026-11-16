@@ -50,9 +50,11 @@ During natural disasters such as seasonal monsoon floods, community volunteers a
 Existing crisis informatics tools only perform message classification without interactive procedural retrieval, while general-purpose LLMs lack strict grounding in approved disaster relief SOPs and deterministic refusal guardrails to prevent hallucinated or high-risk emergency advice.
 
 ## Project Objectives
-- **O1:** To design a document-grounded AI question-answering assistant for non-clinical disaster relief and volunteer operations, based on public civil defense SOP documents, humanitarian reference handbooks, and annotated crisis response datasets.
-- **O2:** To develop the assistant with hybrid retrieval, explicit citation of source SOP sections and datasets, and safety guardrails that refuse questions the data cannot support or that involve high-risk clinical diagnosis and emergency rescue dispatch.
-- **O3:** To evaluate the assistant on retrieval quality, answer faithfulness and citation accuracy, refusal correctness, and latency, against BM25-only and dense-only baselines.
+O1: To design a question-answering assistant for disaster relief volunteers in Malaysia, based on public official directives and guidelines.
+
+O2: To develop the assistant using hybrid retrieval, source citations, and safety guardrails that refuse medical diagnosis and rescue dispatch queries.
+
+O3: To evaluate the assistant on retrieval quality, answer faithfulness, citation accuracy, refusal accuracy, and response latency.
 
 ## Target Users
 NGO student volunteers, community disaster relief coordinators, and logistics mobilization teams who need plain-language, citation-backed answers on shelter setup, supply sorting, and volunteer coordination protocols.
