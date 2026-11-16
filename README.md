@@ -53,7 +53,7 @@ Existing crisis informatics tools only perform message classification without in
 
 ## Project Objectives
 - **O1:** To design a document-grounded AI question-answering assistant for non-clinical disaster relief and volunteer operations, based on public civil defense SOP documents, humanitarian reference handbooks, and annotated crisis response datasets.
-- **O2:** To develop the assistant with hybrid retrieval (keyword plus dense), explicit citation of source SOP sections and datasets, and safety guardrails that refuse questions the data cannot support or that involve high-risk clinical diagnosis and emergency rescue dispatch.
+- **O2:** To develop the assistant with hybrid retrieval, explicit citation of source SOP sections and datasets, and safety guardrails that refuse questions the data cannot support or that involve high-risk clinical diagnosis and emergency rescue dispatch.
 - **O3:** To evaluate the assistant on retrieval quality, answer faithfulness and citation accuracy, refusal correctness, and latency, against BM25-only and dense-only baselines.
 
 ## Target Users
