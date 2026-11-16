@@ -32,12 +32,6 @@ NGO student volunteers, community disaster relief coordinators, and logistics mo
 - **Source 4:** Center for Excellence in Disaster Management and Humanitarian Assistance (CFE-DM). (2025). *Malaysia: Disaster management reference handbook*. ReliefWeb. URL: https://reliefweb.int/report/malaysia/malaysia-disaster-management-reference-handbook-december-2025 *(not processed in the Week 3 V1 pipeline)*
 - **Source 5:** National Disaster Management Agency (NADMA). *Garis Panduan Pengurusan PPS semasa COVID-19* (Malay-language PPS management guideline). URL: https://www.nadma.gov.my/images/nadma/documents/PPSCOVID19/Garis_Panduan_PPS.pdf *(used in the V1 pipeline)*
 
-## Repository Structure
-```
-docs/        Weekly requirements, evaluation criteria, architecture and pipeline documents
-notebooks/   week3_pipeline.ipynb (data pipeline)
-data/        Prepared records and lineage manifests (raw PDFs are not committed)
-```
 
 ## Weekly Progress
 | Week | Focus | Deliverable | Status |
