@@ -19,7 +19,7 @@ Existing crisis informatics tools only perform message classification without in
 
 ## Project Objectives
 - **O1:** To design a question-answering assistant for disaster relief volunteers in Malaysia, based on public official directives and guidelines.
-- **O2:** To develop the assistant using hybrid retrieval, source citations, and safety guardrails that refuse medical diagnosis and rescue dispatch queries.
+- **O2:** To develop the assistant using hybrid retrieval, source citations, and rescue dispatch queries.
 - **O3:** To evaluate the assistant on retrieval quality, answer faithfulness, citation accuracy, refusal accuracy, and response latency.
 
 ## Target Users
