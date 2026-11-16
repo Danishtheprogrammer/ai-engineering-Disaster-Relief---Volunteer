@@ -22,8 +22,6 @@ Existing crisis informatics tools only perform message classification without in
 - **O2:** To develop the assistant with hybrid retrieval (keyword plus dense), explicit citation of source SOP sections and datasets, and safety guardrails that refuse questions the data cannot support or that involve high-risk clinical diagnosis and emergency rescue dispatch.
 - **O3:** To evaluate the assistant on retrieval quality, answer faithfulness and citation accuracy, refusal correctness, and latency, against BM25-only and dense-only baselines.
 
-## Target Users
-NGO student volunteers, community disaster relief coordinators, and logistics mobilization teams who need plain-language, citation-backed answers on shelter setup, supply sorting, and volunteer coordination protocols.
 
 ## Data Sources
 - **Source 1:** QCRI HumAID — Human-Annotated Disaster Incidents Dataset (rescue, volunteering, and donation coordination records). URL: https://huggingface.co/datasets/QCRI/HumAID-all
