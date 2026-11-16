@@ -26,11 +26,9 @@ Existing crisis informatics tools only perform message classification without in
 NGO student volunteers, community disaster relief coordinators, and logistics mobilization teams who need plain-language, citation-backed answers on shelter setup, supply sorting, and volunteer coordination protocols.
 
 ## Data Sources
-- **Source 1:** QCRI HumAID: Human-Annotated Disaster Incidents Dataset (rescue, volunteering, and donation coordination records). URL: https://huggingface.co/datasets/QCRI/HumAID-all *(not processed in the Week 3 V1 pipeline)*
-- **Source 2:** QCRI CrisisBench: Humanitarian Crisis Response & Actionable Needs Dataset. URL: https://huggingface.co/datasets/QCRI/CrisisBench-all-lang *(not processed in the Week 3 V1 pipeline)*
-- **Source 3:** National Security Council Malaysia (MKN). (1997). *Directive No. 20: Policy and mechanism of national disaster management and relief (Role of relief and voluntary bodies)*. URL: https://aipalync.org/document/national-security-council-directive-no-20-policy-and-mechanism-of-national-disaster-management-and-relief *(used in the V1 pipeline)*
-- **Source 4:** Center for Excellence in Disaster Management and Humanitarian Assistance (CFE-DM). (2025). *Malaysia: Disaster management reference handbook*. ReliefWeb. URL: https://reliefweb.int/report/malaysia/malaysia-disaster-management-reference-handbook-december-2025 *(not processed in the Week 3 V1 pipeline)*
-- **Source 5:** National Disaster Management Agency (NADMA). *Garis Panduan Pengurusan PPS semasa COVID-19* (Malay-language PPS management guideline). URL: https://www.nadma.gov.my/images/nadma/documents/PPSCOVID19/Garis_Panduan_PPS.pdf *(used in the V1 pipeline)*
+- **Source 1:** National Security Council Malaysia (MKN). (1997). *Directive No. 20: Policy and mechanism of national disaster management and relief (Role of relief and voluntary bodies)*. URL: https://aipalync.org/document/national-security-council-directive-no-20-policy-and-mechanism-of-national-disaster-management-and-relief *(used in the V1 pipeline)*
+- **Source 2:** Center for Excellence in Disaster Management and Humanitarian Assistance (CFE-DM). (2025). *Malaysia: Disaster management reference handbook*. ReliefWeb. URL: https://reliefweb.int/report/malaysia/malaysia-disaster-management-reference-handbook-december-2025 *
+- **Source 3:** National Disaster Management Agency (NADMA). *Garis Panduan Pengurusan PPS semasa COVID-19* (Malay-language PPS management guideline). URL: https://www.nadma.gov.my/images/nadma/documents/PPSCOVID19/Garis_Panduan_PPS.pdf *(used in the V1 pipeline)*
 
 
 ## Weekly Progress
