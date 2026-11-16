@@ -1,9 +1,9 @@
-# ReliefOps QA: Disaster Relief & Volunteer Operations QA Assistant
+# Disaster Relief & Volunteer Operations QA Assistant
 
 > A RAG-based assistant that helps NGO volunteers and community relief coordinators answer operational disaster response questions by retrieving evidence from official civil defense directives and guidelines to generate explainable, source-cited guidance.
 
 ## Problem Statement
-During natural disasters such as seasonal monsoon floods, community volunteers and relief coordinators must rapidly verify Standard Operating Procedures (SOPs), evacuation shelter management rules, and supply triage categories, which are spread across lengthy policy PDFs. Standard keyword search or static portals require manual cross-referencing across documents and cannot synthesise multi-condition operational answers under time pressure. This project applies AI engineering, specifically retrieval-augmented generation (RAG) with source citation and safety refusal guardrails, to retrieve evidence from official disaster management documents, generate explainable operational guidance, and ground every answer in retrieved sources to ensure field reliability and safety.
+During natural disasters such as seasonal monsoon floods, community volunteers and relief coordinators must rapidly verify Standard Operating Procedures (SOPs), evacuation shelter management rules, and supply triage categories, which are spread across lengthy policy PDFs and unstructured crisis logs. Standard keyword search or static portals require manual cross-referencing across documents and cannot synthesise multi-condition operational answers under time pressure. This project applies AI engineering, specifically retrieval-augmented generation (RAG) with source citation and safety refusal guardrails, to retrieve evidence from official disaster management documents, generate explainable operational guidance, and ground every answer in retrieved sources to ensure field reliability and safety.
 
 ## Evidence of the Problem
 - Humanitarian emergencies generate massive volumes of unstructured crisis reports, urgent needs, and volunteer coordination requests that overwhelm human coordinators trying to cross-reference them against official relief protocols. Alam, F., Qazi, U., Imran, M., & Ofli, F. (2021). HumAID: Human-annotated disaster incidents data from Twitter with deep learning benchmarks. *Proceedings of the International AAAI Conference on Web and Social Media (ICWSM)*, 15(1), 933–942. https://doi.org/10.48550/arXiv.2104.03090
@@ -26,18 +26,17 @@ Existing crisis informatics tools only perform message classification without in
 NGO student volunteers, community disaster relief coordinators, and logistics mobilization teams who need plain-language, citation-backed answers on shelter setup, supply sorting, and volunteer coordination protocols.
 
 ## Data Sources
-- **Source 1:** QCRI HumAID: Human-Annotated Disaster Incidents Dataset (rescue, volunteering, and donation coordination records). URL: https://huggingface.co/datasets/QCRI/HumAID-all. *Status: reference only, not used in the V1 pipeline.*
-- **Source 2:** QCRI CrisisBench: Humanitarian Crisis Response & Actionable Needs Dataset. URL: https://huggingface.co/datasets/QCRI/CrisisBench-all-lang. *Status: reference only, not used in the V1 pipeline.*
-- **Source 3:** National Security Council Malaysia (MKN). (1997). *Directive No. 20: Policy and mechanism of national disaster management and relief (Role of relief and voluntary bodies)*. URL: https://aipalync.org/document/national-security-council-directive-no-20-policy-and-mechanism-of-national-disaster-management-and-relief. *Status: used in the V1 pipeline (Week 3).*
-- **Source 4:** Center for Excellence in Disaster Management and Humanitarian Assistance (CFE-DM). (2025). *Malaysia: Disaster management reference handbook*. ReliefWeb. URL: https://reliefweb.int/report/malaysia/malaysia-disaster-management-reference-handbook-december-2025. *Status: reference only, not used in the V1 pipeline.*
-- **Source 5:** National Disaster Management Agency (NADMA). *Garis Panduan Pengurusan PPS semasa COVID-19* (Malay-language PPS management guideline). URL: https://www.nadma.gov.my/images/nadma/documents/PPSCOVID19/Garis_Panduan_PPS.pdf. *Status: used in the V1 pipeline (Week 3).*
+- **Source 1:** QCRI HumAID: Human-Annotated Disaster Incidents Dataset (rescue, volunteering, and donation coordination records). URL: https://huggingface.co/datasets/QCRI/HumAID-all *(not processed in the Week 3 V1 pipeline)*
+- **Source 2:** QCRI CrisisBench: Humanitarian Crisis Response & Actionable Needs Dataset. URL: https://huggingface.co/datasets/QCRI/CrisisBench-all-lang *(not processed in the Week 3 V1 pipeline)*
+- **Source 3:** National Security Council Malaysia (MKN). (1997). *Directive No. 20: Policy and mechanism of national disaster management and relief (Role of relief and voluntary bodies)*. URL: https://aipalync.org/document/national-security-council-directive-no-20-policy-and-mechanism-of-national-disaster-management-and-relief *(used in the V1 pipeline)*
+- **Source 4:** Center for Excellence in Disaster Management and Humanitarian Assistance (CFE-DM). (2025). *Malaysia: Disaster management reference handbook*. ReliefWeb. URL: https://reliefweb.int/report/malaysia/malaysia-disaster-management-reference-handbook-december-2025 *(not processed in the Week 3 V1 pipeline)*
+- **Source 5:** National Disaster Management Agency (NADMA). *Garis Panduan Pengurusan PPS semasa COVID-19* (Malay-language PPS management guideline). URL: https://www.nadma.gov.my/images/nadma/documents/PPSCOVID19/Garis_Panduan_PPS.pdf *(used in the V1 pipeline)*
 
 ## Repository Structure
 ```
-docs/        Week 1 to 3 documents and diagrams
-notebooks/   week3_pipeline.ipynb
-data/        week3_manifest.json, processed/, pipeline_v1/ (source PDFs are not committed)
-README.md
+docs/        Weekly requirements, evaluation criteria, architecture and pipeline documents
+notebooks/   week3_pipeline.ipynb (data pipeline)
+data/        Prepared records and lineage manifests (raw PDFs are not committed)
 ```
 
 ## Weekly Progress
