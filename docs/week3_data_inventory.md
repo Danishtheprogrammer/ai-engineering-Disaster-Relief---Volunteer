@@ -1,37 +1,54 @@
-# Week 3 Data Inventory: ReliefOps QA
+# Week 3 Data Inventory
 
-## Step A1: Requirement-to-data mapping
+Project: ReliefOps QA | Pathway: A (PDF) | Environment: Google Colab | Pipeline version: week3-v1
 
-| Requirement ID | Needed information / feature | Candidate source | Why usable / constraint |
-| --- | --- | --- | --- |
-| FR1: PPS registration, setup and operating procedures | Text on evacuation centre preparation, victim registration, and agency and volunteer roles in running centres | S01: MKN Directive No. 20 (1997); S02: NADMA Garis Panduan Pengurusan PPS (Malay) | Public government documents. S01 (PDF pages 25 and 26) states that the Social Welfare Department prepares and maintains evacuation centres, arranges food and necessities and registers victims, and that the Malaysian People Voluntary Alliance (RELA) assists with centre maintenance, food service and registration. S02 (PDF page 4) contains a PPS flowchart covering activation, victim check-in (Daftar Masuk Mangsa), kit distribution, check-out (Daftar Keluar) and closure, with the registration documents to be kept (registration book, registration form, log book, visitor book). Constraint: S01 dates from 1997 and has been superseded; S02 pages 1 to 3 are mostly COVID-19 distancing and health-screening rules, so the usable PPS procedure content in S02 is limited. |
-| FR2: supply handling and triage categories | Supply handling guidance and categories of relief items | S02 (PDF page 4, "Agihan Kit"); S01 (PDF page 25, food and necessities) | Only partly covered. S02 lists kit items (basic needs, dry food, extras such as nappies, candles and milk powder) and S01 states that food, clothing and other necessities are arranged and distributed. Neither source defines supply triage categories, so FR2 is not fully supported by the V1 data. |
-| FR3 / RAI4: source reference for every answer | Document identity, section or appendix, and page for every retrievable passage | S01 and S02, with filename, SHA-256 checksum and page metadata | Stable source identity is required before citations can be verified. Constraint: the basic Pathway A splitter sets page to None, so the V1 pipeline preserves page-level records using the PDF page index. |
-| RAI3 / FR6: terminology fairness | Coverage of both English and Malay terms for the same concept | S01 (English: "evacuation centres", 5 hits, "PPS", 0 hits) and S02 (Malay: "PPS", 48 hits, "Pusat Pemindahan Sementara", 1 hit, "evacuation centre", 0 hits) | The two sources use disjoint terms for the same concept, so a keyword-only query in one language cannot retrieve the other source. This enables a later local versus international query comparison. Constraint: two documents are too few for a reliable fairness estimate. |
-| NFR4: reproducible updates | Checksums and a manifest linking each source to its prepared output | S01 and S02 | A new or updated document can be re-ingested and verified by SHA-256 without rebuilding unrelated components. |
+## 1. Purpose
 
-## Step A3: Data type and pathway
+This inventory records the real project sources used by the V1 data pipeline. No synthetic practice dataset is used.
 
-Both sources are unstructured text (PDF), so Pathway A (PDF/TXT) applies. No dummy practice dataset is used. Source files were downloaded into `data/raw` in Colab, listed with Cell 3, and selected explicitly with `select_source()`.
+## 2. Requirements Served
 
-## Step A4: Source inventory
+| Requirement | How the data supports it |
+| --- | --- |
+| FR1 | Official directives supply the content for grounded answers on shelter operations and volunteer coordination. |
+| FR2 | Partly supported. Registration and supply guidance exist, but there are no explicit supply triage categories. |
+| RAI3 | The corpus uses different terms for the same concept ("evacuation centre", "PPS", "Pusat Pemindahan"), which tests bilingual and hybrid retrieval. |
 
-| Source ID | Filename / URL | Type and purpose | Version / date / owner | Access / rights | Inspection evidence |
-| --- | --- | --- | --- | --- | --- |
-| S01 | mkn_directive_20_1997.pdf; https://aipalync.org/document/download/292 (page: https://aipalync.org/document/national-security-council-directive-no-20-policy-and-mechanism-of-national-disaster-management-and-relief) | Unstructured text (PDF, English). Knowledge source for FR1 and FR3. | Dated 1997 as printed. Owner: National Security Council, Prime Minister's Department. Copy hosted by AIPA Lync (original host link disabled). Later revised in 2012 and under further review, so the 1997 text may be outdated. | Public government document. Redistribution terms not stated. PDF not committed to the repository; URL and SHA-256 recorded. | 192,788 bytes; 26 PDF pages; 55,055 characters; no pages without extractable text. SHA-256: 1f9b2faf796291454d741a1b7d66abd3cebf7ed3132f2bef7ecda675ac336ee4. Sample 1 (page 1): cover and table of contents ("Directives National Security Council ... Directive No. 20 ... TABLE OF CONTENTS"). Sample 2 (page 25): role list including "Prepare and maintain the evacuation centres", "To carry out registration on the victim for the purpose of rehabilitation" and "MALAYSIAN PEOPLE VOLUNTARY ALLIANCE(RELA)"; page 26 continues the RELA role, including assisting with registration and rehabilitation work. Term counts: evacuation centre(s) 5, registration 2, PPS 0. Observed issues: 9 possible stray "E" encoding artefacts (for example "post-mortemEis done") and a "ﬁ" ligature in "Deﬁnition". |
-| S02 | nadma_garis_panduan_pps_my.pdf; https://www.nadma.gov.my/images/nadma/documents/PPSCOVID19/Garis_Panduan_PPS.pdf | Unstructured text (PDF, Malay). Knowledge source for FR1 (limited), FR2 (partial) and RAI3/FR6. | Owner: NADMA. No date printed; the text refers to the COVID-19 Perintah Kawalan Pergerakan Fasa-4 and to Perintah Kawalan Pergerakan (Pemulihan). | Public government document hosted on the official NADMA site. Redistribution terms not stated. PDF not committed to the repository; URL and SHA-256 recorded. | 230,221 bytes; 5 PDF pages; 7,586 characters; no pages without extractable text. SHA-256: db47e10e04865c87fc6b1489f16d7ba3321cbf081e0919db6dcc7a380cd2aa87. Sample 1 (page 1): title "Garis Panduan Pengurusan PPS semasa COVID-19" and the statement that the guideline was developed under Perintah Kawalan Pergerakan Fasa-4 as a reference for PPS operation. Sample 2 (page 4): flowchart "CARTA ALIR PENGURUSAN PPS SEMASA COVID-19" listing Pengaktifan PPS, Daftar Masuk Mangsa, Saringan Kesihatan Minimum, Agihan kit PPS, Daftar Keluar and Disinfeksi (Penutupan PPS), the registration documents (buku pendaftaran, borang pendaftaran, buku log, buku pelawat), a reference to "PTO JKM: PERKARA 21", and the kit contents. Term counts: PPS 48, Pusat Pemindahan Sementara 1, pendaftaran 4, daftar 2, evacuation centre 0. Observed issues: spacing artefacts (for example "COVID -19", "sekurang -kurangnya"); 0 stray "E" artefacts; the page 4 flowchart text is extracted as interleaved boxes without a reliable reading order. |
+Please check the requirement IDs against `docs/week2_requirements.md` before submission.
 
-## Checkpoint A
+## 3. Source Register
 
-FR1 and FR3/RAI4 need procedural text from approved documents that can be traced to a source and page. The loaded samples show that S01 provides English role text for evacuation centres, including victim registration (PDF pages 25 and 26), and S02 provides a Malay PPS process flow with registration documents and kit contents (PDF page 4). Both documents have extractable text on every page. The term counts show that S01 and S02 use disjoint vocabulary for the same concept, which is the data basis for RAI3 and for the hybrid retrieval decision. S02 pages 1 to 3 are dominated by COVID-19 distancing and health-screening rules, so S02 supports FR1 only through its flowchart.
+| ID | Source | Language | Pages (kept/total) | Characters kept | Access | SHA-256 |
+| --- | --- | --- | --- | --- | --- | --- |
+| S01 | MKN Directive No. 20 (1997) | English | 24/26 | 52,722 | Public | 1f9b2faf796291454d741a1b7d66abd3cebf7ed3132f2bef7ecda675ac336ee4 |
+| S02 | NADMA Garis Panduan PPS | Malay | 5/5 | 7,423 | Public (nadma.gov.my) | db47e10e04865c87fc6b1489f16d7ba3321cbf081e0919db6dcc7a380cd2aa87 |
+| S03 | Arahan NADMA No. 1 (2024) | Malay | 70/80 | 247,001 | TERHAD, used with permission | cc648944894c2ea079af5eb8fec571d3b349250b55461ecfef4dbf3c1a99c24f |
+| S04 | JKM Peraturan Tetap Operasi Pengurusan Bencana (2018) | Malay | 48/88 | 69,601 | Used with permission | f3ec461ea3ad3ed0d3495db73e8065ac2a300b57fe66eb90fd6e0cbf61945232 |
 
-## Known limitations
+## 4. Inspection Evidence
 
-- S01 and S02 have not been verified against the latest NADMA or Ministry of Health versions.
-- S02 is COVID-era; most of its text (pages 1 to 3) concerns distancing, masks and health screening, which is outside the non-clinical scope of the assistant and is a retrievable risk for FR5.
-- FR2 (supply handling and triage categories) is only partly covered. S02 lists kit items but neither source defines supply triage categories.
-- The S02 page 4 flowchart is extracted without a reliable reading order, so passage boundaries there cannot be trusted.
-- The charts in S01 appendices contain no extractable text.
-- Text extraction artefacts (stray "E" characters, the "ﬁ" ligature, spaced hyphens) will be handled in the Part B cleaning step.
-- The combined corpus is small (about 62,600 characters), which limits the reliability of retrieval and fairness measurements.
-- HumAID, CrisisBench and the CFE-DM handbook are listed in the Week 2 knowledge domain but are not processed in the Week 3 V1 pipeline.
+- S01: the contents pages (1 and 2) are excluded. Typographic ligatures are normalised, and stray "E" characters left by closing quotes are repaired. The directive is flagged `superseded`.
+- S02: page 4 is a flowchart and is kept as one whole-page chunk. Pages 1 to 3 describe COVID controls, so the source is flagged `covid_era`.
+- S03: "TERHAD" stamps, print artefacts of the form "teks NADMA New.indd N" and page numbers are removed. Contents and divider pages are excluded.
+- S04: running page footers are removed. Contents, forms and annexes are excluded by explicit page lists.
+
+## 5. Access and Provenance Caveats
+
+- S01 and S02 are public documents.
+- S03 and S04 were used with permission from NADMA and the course lecturer. [add reference to permission message]. Their text is not redistributed in this repository.
+- Raw PDFs and the prepared text of S03 and S04 are excluded by `.gitignore`. Only counts, hashes and manifests are committed.
+- Source version and access rights are recorded as "Not verified" in the manifests, which is a prompt for the Topic 4 review.
+
+## 6. Sources Considered and Not Used
+
+| Source | Reason |
+| --- | --- |
+| RELA Act (Akta 752) | Covers RELA membership and powers. It has no shelter or disaster content. |
+| Ministry of Health Disaster Management Plan | About 60 pages are clinical, which conflicts with the non-clinical scope. It carries its own copyright notice. |
+| NADMA ETS 8 volunteer slides, slides 53 to 66 | Optional extra (S05). Not part of the executed V1 run. |
+
+## 7. Known Limitations
+
+- S03 produces 65% of all records (638 of 982), which may bias retrieval. This is to be handled in the retrieval stage.
+- S01 and S02 contain outdated or COVID-era content. These are flagged, not deleted.
+- Sources may give different values for the same procedure (for example food-label times), so answers must cite the source.
