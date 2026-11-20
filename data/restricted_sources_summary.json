@@ -1,0 +1,30 @@
+{
+  "S01": {
+    "source": "mkn_directive_20_1997.pdf",
+    "source_sha256": "1f9b2faf796291454d741a1b7d66abd3cebf7ed3132f2bef7ecda675ac336ee4",
+    "records": 139,
+    "pages": 24,
+    "access": "public"
+  },
+  "S02": {
+    "source": "nadma_garis_panduan_pps_my.pdf",
+    "source_sha256": "db47e10e04865c87fc6b1489f16d7ba3321cbf081e0919db6dcc7a380cd2aa87",
+    "records": 19,
+    "pages": 5,
+    "access": "public"
+  },
+  "S03": {
+    "source": "arahan_nadma_no1_2024_my.pdf",
+    "source_sha256": "cc648944894c2ea079af5eb8fec571d3b349250b55461ecfef4dbf3c1a99c24f",
+    "records": 638,
+    "pages": 70,
+    "access": "restricted, text not shared"
+  },
+  "S04": {
+    "source": "jkm_pto_bencana_2018_my.pdf",
+    "source_sha256": "f3ec461ea3ad3ed0d3495db73e8065ac2a300b57fe66eb90fd6e0cbf61945232",
+    "records": 186,
+    "pages": 48,
+    "access": "restricted, text not shared"
+  }
+}
