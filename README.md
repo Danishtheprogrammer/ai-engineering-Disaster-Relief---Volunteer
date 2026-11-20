@@ -26,15 +26,20 @@ Existing crisis informatics tools only perform message classification without in
 NGO student volunteers, community disaster relief coordinators, and logistics mobilization teams who need plain-language, citation-backed answers on shelter setup, supply sorting, and volunteer coordination protocols.
 
 ## Data Sources
-- **Source 1 (S01, used in the V1 pipeline):** National Security Council Malaysia (MKN). (1997). *Directive No. 20: Policy and mechanism of national disaster management and relief (Role of relief and voluntary bodies)*. English PDF, 26 pages. URL: https://aipalync.org/document/national-security-council-directive-no-20-policy-and-mechanism-of-national-disaster-management-and-relief
-- **Source 2 (S02, used in the V1 pipeline):** National Disaster Management Agency (NADMA). *Garis Panduan Pengurusan PPS semasa COVID-19* (Malay-language PPS management guideline). PDF, 5 pages. URL: https://www.nadma.gov.my/images/nadma/documents/PPSCOVID19/Garis_Panduan_PPS.pdf
-- **Source 3 (candidate, not processed in the Week 3 V1 pipeline):** Center for Excellence in Disaster Management and Humanitarian Assistance (CFE-DM). (2025). *Malaysia: Disaster management reference handbook*. ReliefWeb. URL: https://reliefweb.int/report/malaysia/malaysia-disaster-management-reference-handbook-december-2025
+All sources are PDF documents processed by the V1 data pipeline (Week 3).
+
+- **Source 1 (S01):** National Security Council Malaysia (MKN). (1997). *Directive No. 20: Policy and mechanism of national disaster management and relief*. English PDF, 26 pages. Public. URL: https://aipalync.org/document/national-security-council-directive-no-20-policy-and-mechanism-of-national-disaster-management-and-relief
+- **Source 2 (S02):** National Disaster Management Agency (NADMA). *Garis Panduan Pengurusan PPS semasa COVID-19*. Malay PDF, 5 pages. Public. URL: https://www.nadma.gov.my/images/nadma/documents/PPSCOVID19/Garis_Panduan_PPS.pdf
+- **Source 3 (S03):** National Disaster Management Agency (NADMA). (2024). *Arahan NADMA No. 1*. Malay PDF, 80 pages. Marked TERHAD. Used with permission from NADMA and the course lecturer. The text is not redistributed in this repository.
+- **Source 4 (S04):** Department of Social Welfare Malaysia (JKM). (2018). *Peraturan Tetap Operasi Pengurusan Bencana*. Malay PDF, 88 pages. Used with permission from NADMA and the course lecturer. The text is not redistributed in this repository.
+
+Together the four sources produce 982 prepared records (see `docs/week3_data_inventory.md`).
 
 ## Repository Structure
 ```
 docs/        Weekly requirements, evaluation criteria, architecture and pipeline documents
 notebooks/   week3_pipeline.ipynb (data pipeline)
-data/        Prepared records and lineage manifests (raw PDFs are not committed)
+data/        Lineage manifests and pipeline manifests (raw PDFs and restricted prepared text are not committed)
 ```
 
 ## Weekly Progress
@@ -42,4 +47,4 @@ data/        Prepared records and lineage manifests (raw PDFs are not committed)
 |------|-------|-------------|--------|
 | W1 | System map + project scope | README + docs | ✅ |
 | W2 | Requirements, evaluation criteria, V1 architecture | docs/week2_requirements.md, docs/week2_evaluation_criteria.md, docs/week2_architecture_v1.png, docs/week2_architecture_decisions.md | ✅ |
-| W3 | Data engineering: V1 data pipeline (Sources 1 and 2) | notebooks/week3_pipeline.ipynb, docs/week3_data_inventory.md, docs/week3_pipeline_diagram.png, docs/week3_pipeline_decisions.md, data/week3_manifest.json | ✅ |
+| W3 | Data engineering: V1 data pipeline (Sources 1 to 4, 982 records) | notebooks/week3_pipeline.ipynb, docs/week3_data_inventory.md, docs/week3_pipeline_diagram.png, docs/week3_pipeline_decisions.md, data/week3_manifest.json | ✅ |
