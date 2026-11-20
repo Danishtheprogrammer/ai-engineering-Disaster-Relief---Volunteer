@@ -1,0 +1,63 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-20T03:20:43.326257+00:00",
+  "data_type": "documents_s03",
+  "configuration": {
+    "source_id": "S03",
+    "chunk_size": 500,
+    "method": "page-aware",
+    "processing": "page-aware-paragraph-char-500",
+    "toc_pages": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      78,
+      79,
+      80
+    ],
+    "skip_pages": [],
+    "keep_pages": [],
+    "whole_pages": []
+  },
+  "processing_method": "page-aware paragraph chunks of 500 characters",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/arahan_nadma_no1_2024_my.pdf",
+      "sha256": "cc648944894c2ea079af5eb8fec571d3b349250b55461ecfef4dbf3c1a99c24f"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/documents_s03/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/arahan_nadma_no1_2024_my.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents_s03/prepared_text.jsonl",
+      "records": 638
+    }
+  ],
+  "inspection": {
+    "source": "arahan_nadma_no1_2024_my.pdf",
+    "pages_total": 80,
+    "skipped_toc": 10,
+    "skipped_other": 0,
+    "skipped_short": 0,
+    "pages_kept": 70,
+    "characters": 247001
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "a7357242b00bc468f0556841d8d8985086579bf0535884b277e03f5487af1ecc"
+    ],
+    "output_bytes": [
+      426987
+    ]
+  },
+  "source_version": "Not verified",
+  "access_rights": "Not verified - check before sharing"
+}

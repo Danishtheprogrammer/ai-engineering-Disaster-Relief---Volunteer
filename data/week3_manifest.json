@@ -1,0 +1,50 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-20T03:18:47.970083+00:00",
+  "records": [
+    {
+      "source_id": "S01",
+      "source_filename": "mkn_directive_20_1997.pdf",
+      "source_sha256": "1f9b2faf796291454d741a1b7d66abd3cebf7ed3132f2bef7ecda675ac336ee4",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "d504232ff3896e030e3155326b0f00f1debea4d30258ff52521742937af3a545",
+      "processing_note": "S01: page-aware-paragraph-char-500; noise removal; page-level provenance",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    },
+    {
+      "source_id": "S02",
+      "source_filename": "nadma_garis_panduan_pps_my.pdf",
+      "source_sha256": "db47e10e04865c87fc6b1489f16d7ba3321cbf081e0919db6dcc7a380cd2aa87",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "d504232ff3896e030e3155326b0f00f1debea4d30258ff52521742937af3a545",
+      "processing_note": "S02: page-aware-paragraph-char-500; noise removal; page-level provenance",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    },
+    {
+      "source_id": "S03",
+      "source_filename": "arahan_nadma_no1_2024_my.pdf",
+      "source_sha256": "cc648944894c2ea079af5eb8fec571d3b349250b55461ecfef4dbf3c1a99c24f",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "d504232ff3896e030e3155326b0f00f1debea4d30258ff52521742937af3a545",
+      "processing_note": "S03: page-aware-paragraph-char-500; noise removal; page-level provenance",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    },
+    {
+      "source_id": "S04",
+      "source_filename": "jkm_pto_bencana_2018_my.pdf",
+      "source_sha256": "f3ec461ea3ad3ed0d3495db73e8065ac2a300b57fe66eb90fd6e0cbf61945232",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "d504232ff3896e030e3155326b0f00f1debea4d30258ff52521742937af3a545",
+      "processing_note": "S04: page-aware-paragraph-char-500; noise removal; page-level provenance",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    }
+  ]
+}

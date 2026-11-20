@@ -1,0 +1,55 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-20T03:20:25.323847+00:00",
+  "data_type": "documents_s01",
+  "configuration": {
+    "source_id": "S01",
+    "chunk_size": 500,
+    "method": "page-aware",
+    "processing": "page-aware-paragraph-char-500",
+    "toc_pages": [
+      1,
+      2
+    ],
+    "skip_pages": [],
+    "keep_pages": [],
+    "whole_pages": []
+  },
+  "processing_method": "page-aware paragraph chunks of 500 characters",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/mkn_directive_20_1997.pdf",
+      "sha256": "1f9b2faf796291454d741a1b7d66abd3cebf7ed3132f2bef7ecda675ac336ee4"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/documents_s01/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/mkn_directive_20_1997.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents_s01/prepared_text.jsonl",
+      "records": 139
+    }
+  ],
+  "inspection": {
+    "source": "mkn_directive_20_1997.pdf",
+    "pages_total": 26,
+    "skipped_toc": 2,
+    "skipped_other": 0,
+    "skipped_short": 0,
+    "pages_kept": 24,
+    "characters": 52722
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "b2e7b4f5e2385f5c4a82bc1a5a27f755d4e8f033a72c52eb1b1fec76102440ae"
+    ],
+    "output_bytes": [
+      92933
+    ]
+  },
+  "source_version": "Not verified",
+  "access_rights": "Not verified - check before sharing"
+}

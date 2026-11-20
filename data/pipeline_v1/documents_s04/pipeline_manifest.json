@@ -1,0 +1,79 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-20T03:20:57.803666+00:00",
+  "data_type": "documents_s04",
+  "configuration": {
+    "source_id": "S04",
+    "chunk_size": 500,
+    "method": "page-aware",
+    "processing": "page-aware-paragraph-char-500",
+    "toc_pages": [
+      1,
+      2,
+      4,
+      6,
+      14,
+      18,
+      36,
+      56,
+      70,
+      84,
+      87,
+      88
+    ],
+    "skip_pages": [
+      51,
+      52,
+      53,
+      64,
+      65,
+      66,
+      67,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81
+    ],
+    "keep_pages": [],
+    "whole_pages": []
+  },
+  "processing_method": "page-aware paragraph chunks of 500 characters",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/jkm_pto_bencana_2018_my.pdf",
+      "sha256": "f3ec461ea3ad3ed0d3495db73e8065ac2a300b57fe66eb90fd6e0cbf61945232"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/documents_s04/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/jkm_pto_bencana_2018_my.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents_s04/prepared_text.jsonl",
+      "records": 186
+    }
+  ],
+  "inspection": {
+    "source": "jkm_pto_bencana_2018_my.pdf",
+    "pages_total": 88,
+    "skipped_toc": 12,
+    "skipped_other": 13,
+    "skipped_short": 15,
+    "pages_kept": 48,
+    "characters": 69601
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "0dc72dc877d191ba5cce14b2950db32d686ab65a80a42c97a9436616aff8c96b"
+    ],
+    "output_bytes": [
+      121766
+    ]
+  },
+  "source_version": "Not verified",
+  "access_rights": "Not verified - check before sharing"
+}
