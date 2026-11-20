@@ -1,0 +1,14 @@
+# Source PDFs (S03 and S04 are restricted)
+data/raw/
+
+# Combined prepared text contains restricted S03 and S04 content
+data/processed/prepared_text.jsonl
+
+# Restricted per-source prepared text
+data/pipeline_v1/documents_s03/prepared_text.jsonl
+data/pipeline_v1/documents_s04/prepared_text.jsonl
+
+# Python and Colab
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
